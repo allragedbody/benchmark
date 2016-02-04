@@ -1,10 +1,6 @@
-go test -c  生成test文件
+通过test测试，完成对golang各种数据结构及拼接方法的性能指标的测试。一起达到预期效果。
+从测试的情况来看，map相关操作的性能是最差的。其余的情况，请各位进行测试并得出结论。
+测试的结构可能会和go语言版本相关，代码中给出的测试结果是1.4的go上面其运行的结果。
 
-
-go test -test.cpuprofile cpu.out  -test.memprofile mem.out
-
-touch benchmark.out
-go tool pprof benchmark.test benchmark.out
-
-压测效果
+压测命令：
  go test -test.bench=".*"
