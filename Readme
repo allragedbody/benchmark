@@ -1,0 +1,10 @@
+go test -c  生成test文件
+
+
+go test -test.cpuprofile cpu.out  -test.memprofile mem.out
+
+touch benchmark.out
+go tool pprof benchmark.test benchmark.out
+
+压测效果
+ go test -test.bench=".*"
